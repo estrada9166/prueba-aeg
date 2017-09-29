@@ -54,9 +54,9 @@ class UserForm extends Component {
               formReducer.user.id === 3 && formReducer.user.age ?
                 formReducer.user.age < 50 ?
                   <Input placeholder='Fecha de nacimiento' type='date' title='user' 
-                    name='date' />
+                    name='date' val={formReducer.user.date}/>
                 : <SelectInput placeholder='Color preferido' title='user' name='color' 
-                  initial="Selecciona tu color preferido" options={colors} />
+                  initial="Selecciona tu color preferido" options={colors} val={formReducer.user.color}/>
               : null
             }
           </Col>
