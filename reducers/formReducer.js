@@ -1,11 +1,8 @@
-import { INPUT_VALUE, AUTO_FOCUS } from '../constants'
+import { INPUT_VALUE, INPUT_ID } from '../constants'
 
 const initialState = {
   user: {
-    name: null,
-    age: null,
-    date: null,
-    color: null
+    id: 1
   }
 }
 
@@ -16,6 +13,13 @@ export default (state = initialState, action) => {
         [action.title]:
         { ...state[action.title],
           [action.name]: action.val
+        }
+      }
+    case INPUT_ID:
+      return { ...state,
+        user:
+        { ...state['user'],
+          id: action.id
         }
       }
     default:

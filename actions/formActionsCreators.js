@@ -1,4 +1,4 @@
-import { INPUT_VALUE } from '../constants'
+import { INPUT_VALUE, INPUT_ID } from '../constants'
 
 export const inputChange = (title, name, val) => (
   {
@@ -6,5 +6,12 @@ export const inputChange = (title, name, val) => (
     title, 
     name, 
     val
+  }
+)
+
+export const inputHandler = id => (
+  {
+    type: INPUT_ID,
+    id
   }
 )
